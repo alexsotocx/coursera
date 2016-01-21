@@ -4,9 +4,45 @@
 	<title>Dates website</title>
 	<!-- I don't want to add linebreaks -->
 	<style type="text/css">
-		form#main_form div {
+		#main_form div {
 			margin-bottom: 5px; 
 		}
+
+		#main_form > fieldset {
+			background-color: lightyellow;
+			border: 10px solid yellow;
+			margin-bottom: 10px;
+			width: 720px;
+		}
+
+		#main_form > fieldset  label {
+			width: 180px;
+			display: inline-block;
+			text-align: right;
+			vertical-align: top;
+		}
+		#main_form .auto-width {
+			width: auto;
+			text-align: left;
+		}
+
+		#main_form .slider-container > span {
+			text-align: center;
+			background-color: blue;
+			color: white;
+		}
+
+		#main_form textarea {
+			width: 360px;
+			height: 50px;
+		}
+
+		#main_form label:hover, #main_form input:hover {
+			font-size: 25px;
+		}
+
+
+
 	</style>
 </head>
 <body>
@@ -27,9 +63,9 @@
 			<div>
 				<label for="gender">Gender: </label>
 				<input type="radio" name="gender" id="gender_female" value="female" required>
-				<label for="gender_female">Female</label>
+				<label for="gender_female" class="auto-width">Female</label>
 				<input type="radio" name="gender" id="gender_male" value="male" required>
-				<label for="gender_male">Male</label>
+				<label for="gender_male" class="auto-width">Male</label>
 			</div>
 			<div>
 				<label for="age">Age: </label>
@@ -57,13 +93,13 @@
 		</fieldset>
 		<fieldset id="indicators">
 			<legend>Your indicators</legend>
-			<div>
+			<div class="slider-container">
 				<label for="height">Height: </label>
 				<span>Small</span>
 				<input type="range" min="0" max="100" id="height" name="height">
 				<span>Tall</span>
 			</div>
-			<div>
+			<div class="slider-container">
 				<label for="salary">Salary</label>
 				<span>Poor</span>
 				<input type="range" id="salary" name="salary" min="0" max="100">
@@ -83,14 +119,14 @@
 			<div><label for="address">Address: </label><textarea id="address" name="address"></textarea></div>
 			<div>
 				<label for="">Method to contact you: </label>
-				<input type="checkbox" name="method_contact" value="email" id="method_email"><label for="method_email">Email</label>
-				<input type="checkbox" name="method_contact" value="whatsapp" id="method_whatsapp"><label for="method_whatsapp">Whatsapp</label>
-				<input type="checkbox" name="method_contact" value="in-app-chat" id="method_in_app_chat"><label for="method_in_app_chat">In app chat</label>
+				<input type="checkbox" name="method_contact" value="email" id="method_email"><label for="method_email" class="auto-width">Email</label>
+				<input type="checkbox" name="method_contact" value="whatsapp" id="method_whatsapp"><label for="method_whatsapp" class="auto-width">Whatsapp</label>
+				<input type="checkbox" name="method_contact" value="in-app-chat" id="method_in_app_chat"><label for="method_in_app_chat" class="auto-width">In app chat</label>
 			</div>
 		</fieldset>
 		<br/>
 		<input type="submit" value="Send">
 	</form>
-	
+	<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
 </body>
 </html>
