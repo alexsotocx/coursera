@@ -2,85 +2,95 @@
 <html>
 <head>
 	<title>Dates website</title>
+	<!-- I don't want to add linebreaks -->
+	<style type="text/css">
+		form#main_form div {
+			margin-bottom: 5px; 
+		}
+	</style>
 </head>
 <body>
 	<h1>Please Enter Your Details for For Dating website</h1>
-	<fieldset id="face">
-		<legend>Your face</legend>
-		<label>Your image</label>
-		<input type="file">
-		<section><span>Image preview:</span><img src="" alt=""></section>
-	</fieldset>
-	<fieldset id="general_information">
-		<legend>Your General details</legend>
-		<section>
-			<label for="full_name">Name:</label>
-			<input type="text" placeholder="Your full name" name="full_name" id="full_name">	
-		</section>
-		<section>
-			<label for="gender">Gender:</label>
-			<input type="radio" name="gender" id="gender_female" value="female">
-			<label for="gender_female">Female</label>
-			<input type="radio" name="gender" id="gender_male" value="male">
-			<label for="gender_male">Male</label>
-		</section>
-		<section>
-			<label for="age">Age:</label>
-			<input type="number" name="age" id="age" min="0">
-		</section>
-		<section>
-			<label for="date_of_birth">Date of birth:</label>
-			<input type="date" name="date_of_birth" id="date_of_birth">
-		</section>
-		<section>
-			<label for="favourite_color">Favourite color:</label>
-			<input type="color" name="favourite_color" id="favourite_color">
-		</section>
-		<section>
-			<label for="country">Wich country:</label>
-			<select name="country" id="country">
-				<option value=""></option>
-				<option value="Colombia">Colombia</option>
-				<option value="Argentina">Argentina</option>
-				<option value="United States">United States</option>
-				<option value="Alemania">Alemania</option>
-				<option value="Spain">Spain</option>
-				<option value="Portugal">Portugal</option>
-			</select>
-		</section>
-	</fieldset>
-	<fieldset id="indicators">
-		<legend>Your indicators</legend>
-		<div>
-			<label for="height">Height:</label>
-			<span>Small</span>
-			<input type="range" min="0" max="100" id="height" name="height">
-			<span>Tall</span>
-		</div>
-		<div>
-			<label for="salary">Salary</label>
-			<span>Poor</span>
-			<input type="range" id="salary" name="salary" min="0" max="100">
-			<span>Rich</span>
-		</div>
-	</fieldset>
-	<fieldset id="contact_information">
-		<div>
-			<label for="email">Email:</label>
-			<input type="email" name="email" id="email">	
-		</div>
-		<div>
-			<label for="mobile">Mobile:</label>
-			<input type="telephone" id="mobile" name="nombile">
-		</div>
-		<div><label for="address">Address</label><textarea id="address" name="address"></textarea></div>
-		<div>
-			<label for="">Method to contact you:</label>
-			<input type="checkbox" name="method_contact" value="email" id="method_email"><label for="method_email">Email</label>
-			<input type="checkbox" name="method_contact" value="whatsapp" id="method_whatsapp"><label for="method_whatsapp">Whatsapp</label>
-			<input type="checkbox" name="method_contact" value="in-app-chat" id="method_in_app_chat"><label for="method_in_app_chat">In app chat</label>
-		</div>
-	</fieldset>
-	<input type="submit" value="Send">
+	<form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data" id="main_form">
+		<fieldset id="face">
+			<legend>Your face</legend>
+			<label for="profile_photo">Your image</label>
+			<input type="file" name="profile_photo" id="profile_photo" requried>
+			<p>Image preview: </p><img id="preview">
+		</fieldset>
+		<fieldset id="general_information">
+			<legend>Your General details</legend>
+			<div>
+				<label for="full_name">Name: </label>
+				<input type="text" placeholder="Your full name" name="full_name" id="full_name" required>	
+			</div>
+			<div>
+				<label for="gender">Gender: </label>
+				<input type="radio" name="gender" id="gender_female" value="female" required>
+				<label for="gender_female">Female</label>
+				<input type="radio" name="gender" id="gender_male" value="male" required>
+				<label for="gender_male">Male</label>
+			</div>
+			<div>
+				<label for="age">Age: </label>
+				<input type="number" name="age" id="age" min="0" required>
+			</div>
+			<div>
+				<label for="date_of_birth">Date of birth: </label>
+				<input type="date" name="date_of_birth" id="date_of_birth">
+			</div>
+			<div>
+				<label for="favourite_color">Favourite color: </label>
+				<input type="color" name="favourite_color" id="favourite_color">
+			</div>
+			<div>
+				<label for="country">Wich country: </label>
+				<select name="country" id="country">
+					<option value=""></option>
+					<option value="Colombia">Colombia</option>
+					<option value="Argentina">Argentina</option>
+					<option value="United States">United States</option>
+					<option value="Alemania">Alemania</option>
+					<option value="Spain">Spain</option>
+				</select>
+			</div>
+		</fieldset>
+		<fieldset id="indicators">
+			<legend>Your indicators</legend>
+			<div>
+				<label for="height">Height: </label>
+				<span>Small</span>
+				<input type="range" min="0" max="100" id="height" name="height">
+				<span>Tall</span>
+			</div>
+			<div>
+				<label for="salary">Salary</label>
+				<span>Poor</span>
+				<input type="range" id="salary" name="salary" min="0" max="100">
+				<span>Rich</span>
+			</div>
+		</fieldset>
+		<fieldset id="contact_information">
+			<legend>Your contact information</legend>
+			<div>
+				<label for="email">Email: </label>
+				<input type="email" name="email" id="email" required>	
+			</div>
+			<div>
+				<label for="mobile">Mobile: </label>
+				<input type="tel" id="mobile" name="nombile">
+			</div>
+			<div><label for="address">Address: </label><textarea id="address" name="address"></textarea></div>
+			<div>
+				<label for="">Method to contact you: </label>
+				<input type="checkbox" name="method_contact" value="email" id="method_email"><label for="method_email">Email</label>
+				<input type="checkbox" name="method_contact" value="whatsapp" id="method_whatsapp"><label for="method_whatsapp">Whatsapp</label>
+				<input type="checkbox" name="method_contact" value="in-app-chat" id="method_in_app_chat"><label for="method_in_app_chat">In app chat</label>
+			</div>
+		</fieldset>
+		<br/>
+		<input type="submit" value="Send">
+	</form>
+	
 </body>
 </html>
