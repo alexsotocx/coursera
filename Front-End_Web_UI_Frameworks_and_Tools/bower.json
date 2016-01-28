@@ -1,0 +1,15 @@
+{
+  "name": "Front-End_Web_UI_Frameworks_and_Tools",
+  "homepage": "https://github.com/alexsotocx/coursera",
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
