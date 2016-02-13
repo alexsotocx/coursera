@@ -10,46 +10,164 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-social.css">
-	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link rel="stylesheet" type="text/css" href="css/mystyles.css">
 </head>
 
 <body cz-shortcut-listen="true">
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="index.html">Ristorante Con Fusion</a>
-			</div>
-			<div id="navbar" class="navbar-collapse collapse">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
-					<li><a href="aboutus.html"><span class="glyphicon glyphicon-info-sign"
-					   aria-hidden="true"></span> About us</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"
-						role="button" aria-haspopup="true" aria-expanded="false">
-						Menu <span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="#">Appetizers</a></li>
-							<li><a href="#">Main Courses</a></li>
-							<li><a href="#">Desserts</a></li>
-							<li><a href="#">Drinks</a></li>
-							<li role="separator" class="divider"></li>
-							<li class="dropdown-header">Specials</li>
-							<li><a href="#">Lunch Buffet</a></li>
-							<li><a href="#">Weekend Brunch</a></li>
-						</ul>
-					</li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>         
+				<div class="container">
+						<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+										<span class="sr-only">Toggle navigation</span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+								</button>
+								<a class="navbar-brand" href="index.html"><img src="img/logo.png" height="30" width="41"/></a>
+						</div>
+						<div id="navbar" class="navbar-collapse collapse">
+								<ul class="nav navbar-nav">
+										<li   class="active" ><a href="index.html"><span class="glyphicon glyphicon-home"
+												 aria-hidden="true"></span> Home</a></li>
+										<li><a href="aboutus.html">
+												<span class="glyphicon glyphicon-info-sign"
+												 aria-hidden="true"></span> About</a></li>
+										<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown"
+												 role="button" aria-haspopup="true" aria-expanded="false">
+												 <span class="glyphicon glyphicon-list-alt"
+												 aria-hidden="true"></span> Menu <span class="caret"></span></a>
+												<ul class="dropdown-menu">
+														<li><a href="#">Appetizers</a></li>
+														<li><a href="#">Main Courses</a></li>
+														<li><a href="#">Desserts</a></li>
+														<li><a href="#">Drinks</a></li>
+														<li role="separator" class="divider"></li>
+														<li class="dropdown-header">Specials</li>
+														<li><a href="#">Lunch Buffet</a></li>
+														<li><a href="#">Weekend Brunch</a></li>
+												</ul>
+										</li>
+										<li><a href="contactus.html"><i class="fa fa-envelope-o"></i> Contact</a></li>
+								</ul>
+								<ul class="nav navbar-nav navbar-right">
+                    <li><a data-toggle="modal" data-target="#loginModal">
+                    <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                    </li>
+                </ul>
+								
+						</div>
+				</div>
+	</nav>        
+	<div id="loginModal" class="modal fade" role="dialog">
+				<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+						<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Login </h4>
+						</div>
+						<div class="modal-body">
+							<form class="form-inline" role="search" >
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Username">
+									</div>
+									<div class="form-group">
+										<input type="password" class="form-control" placeholder="Password">
+									</div>
+									<div class="form-group">
+										<label>
+											<input type="checkbox" class="form-control" placeholder="Password">
+											<span>Remember me</span>
+										</label>
+									</div>
+									<div class="form-group">	
+										<button type="submit" class="btn btn-info">Sign in</button>
+										<button type="button" class="btn btn-default btn-sm"
+                       data-dismiss="modal">Cancel</button>
+									</div>
+								</form>
+
+						</div>
+				</div>
+				</div>
+	</div>
+	<div id="reserveform" class="modal fade" role="dialog">
+				<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+						<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Reserve Table</h4>
+						</div>
+						<div class="modal-body">
+							<form action="#" class="form-horizontal" id="reserveform">
+								<div class="form-group">
+									<label class="col-xs-12 col-sm-2 control-label">Number of guest</label>
+									<div class="col-xs-12 col-sm-10">
+										<label>
+											<input type="radio" id="people" name="people"> 1
+										</label>
+										<label>
+											<input type="radio" id="people" name="people"> 2
+										</label>
+										<label>
+											<input type="radio" id="people" name="people"> 3
+										</label>
+										<label>
+											<input type="radio" id="people" name="people"> 4
+										</label>
+										<label>
+											<input type="radio" id="people" name="people"> 5
+										</label>
+										<label>
+											<input type="radio" id="people" name="people"> 6
+										</label>
+
+									</div>
+								</div>
+								<div class="form-group" data-toggle="buttons">
+									<label for="section" class="control-label col-xs-12 col-sm-2">Section</label>
+									<div class="col-xs-12 col-sm-10">
+										<div class="btn-group" data-toggle="buttons">
+										  <label class="btn btn-success active">
+										    <input type="radio" name="smoking" id="option1" autocomplete="off" checked> No Smoking
+										  </label>
+										  <label class="btn btn-danger">
+										    <input type="radio" name="smoking" id="option2" autocomplete="off"> Smoking
+										  </label>
+										</div>
+									</div>
+									
+								</div>
+								<div class="form-group has-feedback">
+									<label for="" class="col-xs-12 col-sm-2 control-label">Date and Time</label>
+									<div class="col-xs-12 col-sm-4">
+										<input type="date" placeholder="Date" class="form-control">
+										<i class="glyphicon glyphicon-calendar form-control-feedback"></i>
+									</div>
+									<div class="col-xs-12 col-sm-4">
+										<input type="time" placeholder="Time" class="form-control">
+										<i class="glyphicon glyphicon-time form-control-feedback"></i>
+									</div>
+								</div>
+								<div class="form-group">
+									<p class="col-xs-12 col-sm-2"></p>
+									<div class="col-xs-12 col-sm-4">
+										<input type="submit" value="Reserve" class="btn btn-primary">
+										<button type="button" class="btn btn-default btn-sm"
+                       data-dismiss="modal">Cancel</button>
+									</div>
+								</div>
+							</form>
+							<div class="alert alert-warning alert-dismissible" role="alert">
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<strong>Warning</strong>: Please <a href="tel:+85212345678">Call</a> us to reserve for more than six guests.
+							</div>
+						</div>
+				</div>
+				</div>
+	</div>
 	<header class="jumbotron">
 
 		<!-- Main component for a primary marketing message or call to action -->
@@ -61,22 +179,97 @@
 					<p style="padding:40px;"></p>
 					<p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
 				</div>
-				<div class="col-xs-12 col-sm-4">
+				<div class="col-xs-12 col-sm-2">
+						<p style="padding:20px;"></p>
+						<img src="img/logo.png" class="img-responsive">
+				</div>
+				<div class="col-xs-12 col-sm-2">
+						<p style="padding:20px;"></p>
+						<a href="#reserveform" data-toggle="modal" class="btn btn-warning btn-block">Reserve table</a>
 				</div>
 			</div>
 		</div>
 	</header>
-
+	
 	<div class="container">
+		<div class="row row-content">
+			<div class="col-xs-12">
+				<div id="mycarousel" class="carousel slide" data-ride="carousel">
+					<div class="carousel-inner">
+						<div class="item active">
+							<img class="img-responsive" src="img/uthappizza.png" alt="Uthappizza">
+							<div class="carousel-caption">
+								<h2 class="media-heading">Weekend Grand Buffet  <span class="label label-danger">New</span></h2>
+								<p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+								<p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
+							</div>
+						</div>
+
+						<div class="item">
+							<img class="media-object img-thumbnail" src="img/buffet.png" alt="Uthappizza">
+							<div class="carousel-caption">
+								<h2 class="media-heading">Uthappizza  <span class="label label-danger">Hot</span>  <span class="badge">$4.99</span></h2>
+								<p>A unique combination of Indian Uthappam (pancake) and
+									Italian pizza, topped with Cerignola olives, ripe vine
+									cherry tomatoes, Vidalia onion, Guntur chillies and
+									Buffalo Paneer.</p>
+								<p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
+							</div>
+						</div>
+						<div class="item">
+							<img class="img-responsive" src="img/alberto.png" alt="Uthappizza">
+							<div class="carousel-caption">
+								<h2 class="media-heading">Alberto Somayya</h2>
+								<h4>Executive Chef</h4>
+								<p>Award winning three-star Michelin chef with wide
+								 International experience having worked closely with
+								 whos-who in the culinary world, he specializes in
+									creating mouthwatering Indo-Italian fusion experiences.
+								 </p>
+								<p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
+							</div>
+						</div>
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+						    <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+						    <li data-target="#mycarousel" data-slide-to="1"></li>
+						    <li data-target="#mycarousel" data-slide-to="2"></li>
+						</ol>
+						<!-- Controls -->
+						<a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
+						    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						    <span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
+						    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						    <span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="row row-content">
 			<div class="col-xs-12 col-sm-3 col-sm-push-9">
 				<p style="padding:20px;"></p>
 				<h3 align="center">Our Lipsmacking Culinary Creations</h3>
 			</div>
 			<div class="col-xs-12 col-sm-9 col-sm-pull-3">
-				<h2>Uthappizza</h2>
-				<p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
-				<p><a href="https://d396qusza40orc.cloudfront.net/phoenixassets/web-frameworks/index.html#">More »</a></p>
+				<div class="media">
+						<div class="media-left media-middle">
+								<a href="#">
+								<img class="media-object img-thumbnail"
+								 src="img/uthappizza.png" alt="Uthappizza">
+								</a>
+						</div>
+						<div class="media-body">
+								<h2 class="media-heading">Uthappizza  <span class="label label-danger">Hot</span>  <span class="badge">$4.99</span></h2>
+								<p>A unique combination of Indian Uthappam (pancake) and
+									Italian pizza, topped with Cerignola olives, ripe vine
+									cherry tomatoes, Vidalia onion, Guntur chillies and
+									Buffalo Paneer.</p>
+								<p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
+						</div>
+				</div>
 			</div>
 		</div>
 
@@ -87,9 +280,19 @@
 				<h3 align="center">This Month's Promotions</h3>
 			</div>
 			<div class="col-xs-12 col-sm-9">
-				<h2>Weekend Grand Buffet</h2>
-				<p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
-				<p><a href="https://d396qusza40orc.cloudfront.net/phoenixassets/web-frameworks/index.html#">More »</a></p>
+				<div class="media">
+						<div class="pull-right media-right media-middle">
+								<a href="#">
+								<img class="media-object img-thumbnail"
+								 src="img/buffet.png" alt="Uthappizza">
+								</a>
+						</div>
+						<div class="media-body">
+								<h2 class="media-heading">Weekend Grand Buffet  <span class="label label-danger">New</span></h2>
+								<p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+								<p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
+						</div>
+				</div>
 			</div>
 		</div>
 
@@ -99,10 +302,24 @@
 				<h3 align="center">Meet our Culinary Specialists</h3>
 			</div>
 			<div class="col-xs-12 col-sm-9 col-sm-pull-3">
-				<h2>Alberto Somayya</h2>
-				<h4>Executive Chef</h4>
-				<p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
-				<p><a href="https://d396qusza40orc.cloudfront.net/phoenixassets/web-frameworks/index.html#">More »</a></p>
+				<div class="media">
+						<div class="media-left media-middle">
+								<a href="#">
+								<img class="media-object img-thumbnail"
+								 src="img/alberto.png" alt="Alberto Somayya">
+								</a>
+						</div>
+						<div class="media-body">
+								<h2 class="media-heading">Alberto Somayya</h2>
+								<h4>Executive Chef</h4>
+								<p>Award winning three-star Michelin chef with wide
+								 International experience having worked closely with
+								 whos-who in the culinary world, he specializes in
+									creating mouthwatering Indo-Italian fusion experiences.
+								 </p>
+								<p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
+						</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -151,5 +368,9 @@
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-
+	<script type="text/javascript">
+			$(document).ready(function(){
+			$('[data-toggle="tooltip"]').tooltip();
+			 });
+	</script>
 </body></html>
