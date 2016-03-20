@@ -1,12 +1,11 @@
 var Express = require('express');
 var Morgan = require('morgan');
-var BodyParser = require('body-parser');
-
 
 //Routers
 var DishRouter = require('./dishRouter.js');
 var LeaderRouter = require('./leaderRouter.js');
 var PromoRouter = require('./PromoRouter.js');
+
 //Configuration
 var hostname = 'localhost';
 var port = 3000;
