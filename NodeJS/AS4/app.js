@@ -22,6 +22,7 @@ db.once('open', function () {
 var dishRouter = require('./routes/dishRouter');
 var promoRouter = require('./routes/promoRouter');
 var leadRouter = require('./routes/leaderRouter');
+var favoriteRoute = require('./routes/favoritesRouter.js');
 var userRouter = require('./routes/users');
 
 
@@ -50,6 +51,7 @@ app.use('/dishes', dishRouter);
 app.use('/promotions', promoRouter);
 app.use('/leadership', leadRouter);
 app.use('/users', userRouter);
+app.use('/favorites', favoriteRoute);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
