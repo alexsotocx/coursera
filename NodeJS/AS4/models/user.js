@@ -7,6 +7,8 @@ var User = new Schema({
 	password: String,
 	firstname: {type: String, default: ''},
 	lastname: {type: String, default: ''},
+	OauthId: String,
+	OauthToken: String,
 	admin: {
 		type: Boolean,
 		default: false
