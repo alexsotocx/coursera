@@ -6,6 +6,9 @@ def gcd(a,b):
 	else:
 		return gcd(b, a % b)
 
+def lcm(a,b):
+	return long(a*b/gcd(a,b))
+
 input = sys.stdin.read()
-a, b = map(int, input.split())
-print(gcd(a,b))
+a, b = map(long, input.split())
+print(lcm(a,b))
